@@ -1,0 +1,22 @@
+<section class="button-container">
+  <div>
+    <button mat-raised-button color="primary" (click)="FetchNote()">
+      Fetch Notes
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="AddNote()"
+      style="margin-left: 20px"
+    >
+      Add Notes
+    </button>
+  </div>
+</section>
+
+<div class="notes-container">
+  <mat-card class="note-box" *ngFor="let note of notes">
+    <div class="note-id">{{ note.noteText }}</div>
+    <div class="note-text">{{ note.createdAt }}</div>
+  </mat-card>
+</div>

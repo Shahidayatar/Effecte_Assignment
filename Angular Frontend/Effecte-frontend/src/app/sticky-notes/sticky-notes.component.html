@@ -1,0 +1,45 @@
+<div class="notes-container">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="FetchNotes()"
+    class="fetch"
+  >
+    Fetch Notes
+  </button>
+  <form>
+    <textarea
+      [(ngModel)]="newNote"
+      name="newNote"
+      maxlength="200"
+      placeholder="Type a new note..."
+    ></textarea>
+    <button (click)="addNote()" class="Add">Add</button>
+  </form>
+
+  <ul>
+    <li
+      *ngFor="let note of notes; let i = index"
+      (click)="onSelect(note, i)"
+      [class.selected]="note === selectedNote"
+    >
+      <div class="note-box">
+        <div class="note-text">{{ note.noteText }}</div>
+        <div class="note-date">{{ note.createdAt | date : "medium" }}</div>
+      </div>
+    </li>
+  </ul>
+
+  <div *ngIf="selectedNote" class="edit-form">
+    <form>
+      <textarea
+        [(ngModel)]="selectedNote.noteText"
+        name="selectedNoteText"
+        maxlength="200"
+      ></textarea>
+      <button (click)="updateNote()">Save</button>
+      <button (click)="deleteNote()">Delete</button>
+      <button (click)="selectedNote = undefined">Cancel</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<body>
+  <app-note-handler
+    *ngIf="router.url.includes('/FetchNotes')"
+  ></app-note-handler>
+  <app-sticky-notes *ngIf="router.url.includes('/')"></app-sticky-notes>
+</body>

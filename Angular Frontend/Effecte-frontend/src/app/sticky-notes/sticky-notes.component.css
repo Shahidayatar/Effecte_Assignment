@@ -1,0 +1,107 @@
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+
+textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  resize: none;
+  background-color: #fff4db;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 20%;
+}
+
+button {
+  background-color: #fca311;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.Add {
+  margin-top: 20%;
+  margin-left: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 13%;
+}
+
+li {
+  margin: 10px;
+  border: 1px solid #fca311;
+  border-radius: 5px;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+.note-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+
+.note-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  max-height: 140px;
+  padding: 10px;
+  overflow: auto;
+  background-color: #fff4db;
+  font-size: 16px;
+}
+
+.note-date {
+  font-size: 12px;
+  color: #000000;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+body {
+  background-color: #f7ede2;
+}
+
+.edit-form {
+  position: fixed;
+  margin-left: 40%;
+}
+.edit-form button {
+  margin-left: 10px;
+  margin-top: 20%;
+}
+.fetch {
+  top: 10%;
+}
